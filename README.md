@@ -38,11 +38,11 @@ The dataset contains multiple tables and hence proper merging of each table need
 
 ### Model Planning and Model Building 
 - Divide dataset into train and test : split the rows whose campaign_id are smaller than 14 into train data and rows whose campaign id are larger than 14 into test data. The ratio of observations between training data and test data is around 8:2
-- Models:   Since I used SMOTE and ROSE method to balance the training data, I trained different machine learning algorithms on both SMOTE and ROSE methods, including: Logistic regression, Decision trees，Support vector machines，GAM, XGboost.
+- Models:   Since I used SMOTE and ROSE method to balance the training data, I trained different machine learning algorithms on both SMOTE and ROSE methods, including: Logistic regression, Decision tree，Support vector machine，Random Forest, XGboost.
 - Evaluation Metric: ROC curve between the predicted probability and the observed target, balanced accuracy
    
 ### Result
-- GAM and XGboost perform best, and test result achieved almost 93% balanced accuracy.
+- Logistic regression and XGboost perform best, and test result achieved almost 93% balanced accuracy.
 - The five most important variables that have impact on coupon redemption:
   Redemption_chance, No_brand_type_purchased_CouponRedeem, No_category_purchased_CouponRedeem, Duration, Past_avg_custom_quant
 
